@@ -68,7 +68,7 @@ You can play around with the correct deployed version of this code using [This D
 
 Note: It's not a perfect mapping to what you're going to build, below highlights the difference between the deployed version and what you are going to build.
 
-- The deployed version has three buttons in the Section components that you won't have to worry about
+- The deployed version has three buttons in the Section components that you won't have to worry about, we will leave in the something similar that should allow you to easily switch between working on your class app and your functional app.
 
 ![Links you won't have](./public/links-you-wont-have.png)
 
