@@ -77,10 +77,10 @@ Note: It's not a perfect mapping to what you're going to build, below highlights
 
 ## Showing the Correct Component
 
-- [x] place `FunctionalDogs` inside of the `.content-container` div of the `FunctionalSection` component **using React Children**
-- [x] place `FunctionalCreateDogForm` inside of the `.content-container` div of the `FunctionalSection` component **using React Children**
-- [x] place `ClassDogs` inside of the `.content-container` div of the `ClassSection` component **using React Children**
-- [x] place `ClassCreateDogForm` inside of the `.content-container` div of the `ClassSection` component **using React Children**
+- [ ] place `FunctionalDogs` inside of the `.content-container` div of the `FunctionalSection` component **using React Children**
+- [ ] place `FunctionalCreateDogForm` inside of the `.content-container` div of the `FunctionalSection` component **using React Children**
+- [ ] place `ClassDogs` inside of the `.content-container` div of the `ClassSection` component **using React Children**
+- [ ] place `ClassCreateDogForm` inside of the `.content-container` div of the `ClassSection` component **using React Children**
 
 ## Navigation
 
