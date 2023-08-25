@@ -104,8 +104,8 @@ You should use conditional rendering to show different components inside of the 
 
 ### when the create dog tab is active
 
-- [ ] should show the `Dogs` component
-- [ ] the selected dogs should be ONLY THE DOGS WHERE `isFavorite` IS FALSE
+- [ ] should show the `(Functional | Class)CreateDogForm` component
+- [ ] should not show the `Dogs` component
 
 ### Tabs
 
