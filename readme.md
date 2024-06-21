@@ -78,8 +78,8 @@ Note: It's not a perfect mapping to what you're going to build, below highlights
 
 ## Showing the Correct Component
 
-- [ ] place `FunctionalDogs` inside of the `.content-container` div of the `FunctionalSection` component **using React Children**
-- [ ] place `FunctionalCreateDogForm` inside of the `.content-container` div of the `FunctionalSection` component **using React Children**
+- [X] place `FunctionalDogs` inside of the `.content-container` div of the `FunctionalSection` component **using React Children**
+- [X] place `FunctionalCreateDogForm` inside of the `.content-container` div of the `FunctionalSection` component **using React Children**
 - [ ] place `ClassDogs` inside of the `.content-container` div of the `ClassSection` component **using React Children**
 - [ ] place `ClassCreateDogForm` inside of the `.content-container` div of the `ClassSection` component **using React Children**
 
@@ -89,31 +89,31 @@ You should use conditional rendering to show different components inside of the 
 
 ### when no tab is active
 
-- [ ] show the `(Functional | Class)Dogs` component
-- [ ] the dogs we can see should be ALL OF THE DOGS FETCHED
+- [X] show the `(Functional | Class)Dogs` component
+- [X] the dogs we can see should be ALL OF THE DOGS FETCHED
 
 ### when the `favorited` tab is active
 
-- [ ] shows the `(Functional | Class)Dogs` component
-- [ ] the dogs we can see should be ONLY THE DOGS WHERE `isFavorite` IS TRUE
+- [X] shows the `(Functional | Class)Dogs` component
+- [X] the dogs we can see should be ONLY THE DOGS WHERE `isFavorite` IS TRUE
 
 ### when the `unfavorited` tab is active
 
-- [ ] should show the `Dogs` component
-- [ ] the selected dogs should be ONLY THE DOGS WHERE `isFavorite` IS FALSE
+- [X] should show the `Dogs` component
+- [X] the selected dogs should be ONLY THE DOGS WHERE `isFavorite` IS FALSE
 
 ### when the create dog tab is active
 
-- [ ] should show the `(Functional | Class)CreateDogForm` component
-- [ ] should not show the `Dogs` component
+- [X] should show the `(Functional | Class)CreateDogForm` component
+- [X] should not show the `Dogs` component
 
 ### Tabs
 
-- [ ] Should be black when active (You can add the `active` class to it to style an active tab correctly)
-- [ ] Should be white when inactive
-- [ ] Only zero - one tab should be active at a time
-- [ ] Clicking on a tab should make it active and make all other tabs inactive
-- [ ] Clicking an Active Tab should make it inactive
+- [X] Should be black when active (You can add the `active` class to it to style an active tab correctly)
+- [X] Should be white when inactive
+- [X] Only zero - one tab should be active at a time
+- [X] Clicking on a tab should make it active and make all other tabs inactive
+- [X] Clicking an Active Tab should make it inactive
 
 ## Interacting With the API
 
@@ -125,9 +125,9 @@ You should use conditional rendering to show different components inside of the 
 
 ## Organizing your fetch calls
 
-- [ ] You should have a file called `api.ts` with a request object that contains all of your fetching functions
-- [ ] These can and should be shared to both your class components and your functional components as needed
-- [ ] `getAllDogs` should return a promise that resolves to an array of all the dogs in the database
+- [X] You should have a file called `api.ts` with a request object that contains all of your fetching functions
+- [X] These can and should be shared to both your class components and your functional components as needed
+- [X] `getAllDogs` should return a promise that resolves to an array of all the dogs in the database
 - [ ] `postDog` should take in a partial dog object, and return a promise that resolves to the dog object that was created
   - Note: Don't provide an id with the body of your request, the server will create an id for you
 - [ ] `updateDog` should take in a partial dog object, and return a promise that resolves to the dog object that was modified

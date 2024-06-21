@@ -1,8 +1,17 @@
-// you can use this type for react children if you so choose
-import { ReactNode } from "react";
+import { Dispatch, ReactNode, SetStateAction } from "react";
 import { Link } from "react-router-dom";
+import { View } from "../types";
+interface FunctionalSectionProps {
+  children: ReactNode;
+  setCurrentView: Dispatch<SetStateAction<View>>;
+  currentView: View;
+}
 
-export const FunctionalSection = () => {
+export const FunctionalSection = ({
+  children,
+  setCurrentView,
+  currentView,
+}: FunctionalSectionProps) => {
   return (
     <section id="main-section">
       <div className="container-header">
@@ -12,20 +21,43 @@ export const FunctionalSection = () => {
         </Link>
         <div className="selectors">
           {/* This should display the favorited count */}
-          <div className={`selector active`} onClick={() => {}}>
+          <div
+            className={`selector ${
+              currentView === "favorited" ? "active" : ""
+            }`}
+            onClick={() => {
+              setCurrentView(currentView === "favorited" ? "" : "favorited");
+            }}
+          >
             favorited ( 12 )
           </div>
 
           {/* This should display the unfavorited count */}
-          <div className={`selector`} onClick={() => {}}>
+          <div
+            className={`selector ${
+              currentView === "unfavorited" ? "active" : ""
+            }`}
+            onClick={() => {
+              setCurrentView(
+                currentView === "unfavorited" ? "" : "unfavorited"
+              );
+            }}
+          >
             unfavorited ( 25 )
           </div>
-          <div className={`selector`} onClick={() => {}}>
+          <div
+            className={`selector ${
+              currentView === "create dog" ? "active" : ""
+            }`}
+            onClick={() => {
+              setCurrentView(currentView === "create dog" ? "" : "create dog");
+            }}
+          >
             create dog
           </div>
         </div>
       </div>
-      <div className="content-container"></div>
+      <div className="content-container">{children}</div>
     </section>
   );
 };

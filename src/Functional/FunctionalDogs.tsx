@@ -1,92 +1,59 @@
+import { useState, useEffect } from "react";
 import { DogCard } from "../Shared/DogCard";
-import { dogPictures } from "../dog-pictures";
+import { View, Dog } from "../types";
+import { Requests } from "../api";
+interface FunctionalDogsProps {
+  currentView: View;
+}
 
-// Right now these dogs are constant, but in reality we should be getting these from our server
-export const FunctionalDogs = () => {
+export const FunctionalDogs = ({ currentView }: FunctionalDogsProps) => {
+  const [dogArray, setDogsArray] = useState<Dog[]>([]); // CHANGE BACK TO EMPTY ONCE GET IS IN PLACE
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const { getAllDogs, updateDog, deleteDog } = Requests;
+  let dogArrayCopy = [...dogArray];
+
+  useEffect(() => {
+    async function fetchData() {
+      setIsLoading(true);
+      try {
+        const dogsData = await getAllDogs();
+        setDogsArray(dogsData);
+        setIsLoading(false);
+      } catch (error) {
+        console.error("Error fetching dogs:", error);
+        setIsLoading(false);
+      }
+    }
+    fetchData();
+  }, []);
+
+  switch (currentView) {
+    case "favorited":
+      dogArrayCopy = dogArrayCopy.filter((dog) => dog.isFavorite);
+      break;
+    case "unfavorited":
+      dogArrayCopy = dogArrayCopy.filter((dog) => !dog.isFavorite);
+      break;
+  }
+
   return (
-    //  the "<> </>"" are called react fragments, it's like adding all the html inside
-    // without adding an actual html element
     <>
-      <DogCard
-        dog={{
-          id: 1,
-          image: dogPictures.BlueHeeler,
-          description: "Example Description",
-          isFavorite: false,
-          name: "Cute Blue Heeler",
-        }}
-        key={1}
-        onTrashIconClick={() => {
-          alert("clicked trash");
-        }}
-        onHeartClick={() => {
-          alert("clicked heart");
-        }}
-        onEmptyHeartClick={() => {
-          alert("clicked empty heart");
-        }}
-        isLoading={false}
-      />
-      <DogCard
-        dog={{
-          id: 2,
-          image: dogPictures.Boxer,
-          description: "Example Description",
-          isFavorite: false,
-          name: "Cute Boxer",
-        }}
-        key={2}
-        onTrashIconClick={() => {
-          alert("clicked trash");
-        }}
-        onHeartClick={() => {
-          alert("clicked heart");
-        }}
-        onEmptyHeartClick={() => {
-          alert("clicked empty heart");
-        }}
-        isLoading={false}
-      />
-      <DogCard
-        dog={{
-          id: 3,
-          image: dogPictures.Chihuahua,
-          description: "Example Description",
-          isFavorite: false,
-          name: "Cute Chihuahua",
-        }}
-        key={3}
-        onTrashIconClick={() => {
-          alert("clicked trash");
-        }}
-        onHeartClick={() => {
-          alert("clicked heart");
-        }}
-        onEmptyHeartClick={() => {
-          alert("clicked empty heart");
-        }}
-        isLoading={false}
-      />
-      <DogCard
-        dog={{
-          id: 4,
-          image: dogPictures.Corgi,
-          description: "Example Description",
-          isFavorite: false,
-          name: "Cute Corgi",
-        }}
-        key={4}
-        onTrashIconClick={() => {
-          alert("clicked trash");
-        }}
-        onHeartClick={() => {
-          alert("clicked heart");
-        }}
-        onEmptyHeartClick={() => {
-          alert("clicked empty heart");
-        }}
-        isLoading={false}
-      />
+      {dogArrayCopy.map(({ id, image, description, isFavorite, name }) => (
+        <DogCard
+          key={id}
+          dog={{
+            id: id,
+            image: image,
+            description: description,
+            isFavorite: isFavorite,
+            name: name,
+          }}
+          onTrashIconClick={() => deleteDog(id)}
+          onEmptyHeartClick={() => updateDog(id, !isFavorite)}
+          onHeartClick={() => updateDog(id, !isFavorite)}
+          isLoading={isLoading}
+        />
+      ))}
     </>
   );
 };
