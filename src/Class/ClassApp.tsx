@@ -106,6 +106,7 @@ export class ClassApp extends Component<Record<string, never>, ClassAppState> {
               setDogsArray={(dogs: Dog[]) => this.setState({ dogsArray: dogs })}
               handleDeleteDog={this.handleDeleteDog}
               handleUpdateDog={this.handleUpdateDog}
+              fetchDogs={this.fetchDogs}
             />
           )}
         </ClassSection>
