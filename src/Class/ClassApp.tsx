@@ -95,6 +95,7 @@ export class ClassApp extends Component<Record<string, never>, ClassAppState> {
               setIsLoading={(loading: boolean) =>
                 this.setState({ isLoading: loading })
               }
+              fetchDogs={this.fetchDogs}
             />
           ) : (
             <ClassDogs

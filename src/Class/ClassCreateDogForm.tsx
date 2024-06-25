@@ -6,6 +6,7 @@ import toast from "react-hot-toast";
 interface ClassCreateDogFormProps {
   isLoading: boolean;
   setIsLoading: (loading: boolean) => void;
+  fetchDogs: () => void;
 }
 
 const defaultSelectedImage = dogPictures.BlueHeeler;
@@ -38,6 +39,7 @@ export class ClassCreateDogForm extends Component<ClassCreateDogFormProps> {
         description,
         isFavorite: false,
       });
+      this.props.fetchDogs();
       toast.success("Ruff!! Dog created.");
       this.resetForm();
     } catch (error) {

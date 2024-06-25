@@ -111,6 +111,20 @@
       "description": "test",
       "isFavorite": false,
       "id": 32
+    },
+    {
+      "name": "New Dog ",
+      "image": "/assets/blue-heeler.png",
+      "description": "Name TBD",
+      "isFavorite": false,
+      "id": 33
+    },
+    {
+      "name": "Test3",
+      "image": "/assets/chihuahua.avif",
+      "description": "testing",
+      "isFavorite": false,
+      "id": 34
     }
   ]
 }
