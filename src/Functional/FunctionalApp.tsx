@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect } from "react";
 import { FunctionalCreateDogForm } from "./FunctionalCreateDogForm";
 import { FunctionalDogs } from "./FunctionalDogs";
 import { FunctionalSection } from "./FunctionalSection";
@@ -55,9 +55,8 @@ export function FunctionalApp() {
     }
   };
 
-  // this useMemo does not optimize as much as I wanted
   // can be moved to Dogs component and handled there
-  const filteredDogArray = useMemo(() => {
+  const filteredDogArray = (() => {
     switch (currentView) {
       case "favorited":
         return dogsArray.filter((dog) => dog.isFavorite);
@@ -66,7 +65,7 @@ export function FunctionalApp() {
       default:
         return dogsArray;
     }
-  }, [currentView, dogsArray]);
+  })();
 
   return (
     <div className="App" style={{ backgroundColor: "skyblue" }}>
