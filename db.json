@@ -132,6 +132,20 @@
       "description": "Tyler is the bestest boy ",
       "isFavorite": false,
       "id": 35
+    },
+    {
+      "name": "Fetcher",
+      "image": "/assets/boxer.jpeg",
+      "description": "Loves to run ",
+      "isFavorite": false,
+      "id": 36
+    },
+    {
+      "name": "Test4",
+      "image": "/assets/chihuahua.avif",
+      "description": "Test4 ",
+      "isFavorite": false,
+      "id": 37
     }
   ]
 }

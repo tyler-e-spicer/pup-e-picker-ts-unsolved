@@ -7,13 +7,9 @@ interface ClassDogsProps {
   filteredDogsArray: Dog[];
   handleDeleteDog: (dogId: number) => Promise<void>;
   handleUpdateDog: (dogId: number, updatedDog: Partial<Dog>) => Promise<void>;
-  fetchDogs: () => void;
 }
 
 export class ClassDogs extends Component<ClassDogsProps> {
-  componentDidMount() {
-    this.props.fetchDogs();
-  }
 
   render() {
     const { isLoading, filteredDogsArray, handleDeleteDog, handleUpdateDog } =

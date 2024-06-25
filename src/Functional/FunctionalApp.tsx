@@ -75,8 +75,8 @@ export function FunctionalApp() {
       <FunctionalSection
         currentView={currentView}
         setCurrentView={setCurrentView}
-        faveDogs={faveDogs.length}
-        unFaveDogs={unFaveDogs.length}
+        numOfFaveDogs={faveDogs.length}
+        numOfUnFaveDogs={unFaveDogs.length}
       >
         {currentView === "create dog" ? (
           <FunctionalCreateDogForm
@@ -87,9 +87,7 @@ export function FunctionalApp() {
         ) : (
           <FunctionalDogs
             isLoading={isLoading}
-            setIsLoading={setIsLoading}
             filteredDogsArray={filteredDogArray}
-            setDogsArray={setDogsArray}
             handleDeleteDog={handleDeleteDog}
             handleUpdateDog={handleUpdateDog}
           />

@@ -103,7 +103,6 @@ export class ClassApp extends Component<Record<string, never>, ClassAppState> {
               filteredDogsArray={filteredDogArray}
               handleDeleteDog={this.handleDeleteDog}
               handleUpdateDog={this.handleUpdateDog}
-              fetchDogs={this.fetchDogs}
             />
           )}
         </ClassSection>
