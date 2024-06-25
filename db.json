@@ -11,7 +11,7 @@
       "name": "Kira",
       "image": "/assets/boxer.png",
       "description": "elegantly um ugh ski arrogate ugh hence",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 8
     },
     {
@@ -25,7 +25,7 @@
       "name": "Ashtyn",
       "image": "/assets/dalmation.png",
       "description": "pressurise uh-huh brr more lightly beyond unlike pfft",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 15
     },
     {
@@ -53,14 +53,14 @@
       "name": "Eric",
       "image": "/assets/blue-heeler.png",
       "description": "Aamzing dog! ",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 24
     },
     {
       "name": "Laurie ",
       "image": "/assets/boxer.jpeg",
       "description": "Is woman's best friend. ",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 25
     },
     {

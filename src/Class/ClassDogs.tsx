@@ -4,9 +4,7 @@ import { Dog } from "../types";
 
 interface ClassDogsProps {
   isLoading: boolean;
-  setIsLoading: (loading: boolean) => void;
   filteredDogsArray: Dog[];
-  setDogsArray: (dogs: Dog[]) => void;
   handleDeleteDog: (dogId: number) => Promise<void>;
   handleUpdateDog: (dogId: number, updatedDog: Partial<Dog>) => Promise<void>;
   fetchDogs: () => void;

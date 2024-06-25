@@ -99,11 +99,7 @@ export class ClassApp extends Component<Record<string, never>, ClassAppState> {
           ) : (
             <ClassDogs
               isLoading={isLoading}
-              setIsLoading={(loading: boolean) =>
-                this.setState({ isLoading: loading })
-              }
               filteredDogsArray={filteredDogArray}
-              setDogsArray={(dogs: Dog[]) => this.setState({ dogsArray: dogs })}
               handleDeleteDog={this.handleDeleteDog}
               handleUpdateDog={this.handleUpdateDog}
               fetchDogs={this.fetchDogs}
