@@ -139,6 +139,13 @@
       "description": "Spicer",
       "isFavorite": false,
       "id": 38
+    },
+    {
+      "name": "T",
+      "image": "/assets/blue-heeler.png",
+      "description": "T",
+      "isFavorite": false,
+      "id": 39
     }
   ]
 }
