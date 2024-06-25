@@ -29,25 +29,11 @@
       "id": 15
     },
     {
-      "name": "Franz",
-      "image": "/assets/corgi.png",
-      "description": "finance campaign after ha once twig loathe disadvantage",
-      "isFavorite": true,
-      "id": 16
-    },
-    {
       "name": "Dixie",
       "image": "/assets/chihuahua.avif",
       "description": "teach standing ah angrily sideline vandalize though since",
       "isFavorite": true,
       "id": 18
-    },
-    {
-      "name": "Tyler2",
-      "image": "/assets/dalmation.png",
-      "description": "New and improved ",
-      "isFavorite": false,
-      "id": 22
     },
     {
       "name": "Eric",
@@ -146,6 +132,13 @@
       "description": "Test4 ",
       "isFavorite": false,
       "id": 37
+    },
+    {
+      "name": "Tyler",
+      "image": "/assets/boxer.jpeg",
+      "description": "Spicer",
+      "isFavorite": false,
+      "id": 38
     }
   ]
 }
