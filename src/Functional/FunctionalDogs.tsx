@@ -1,56 +1,50 @@
-import { useState, useEffect } from "react";
+import { useEffect, Dispatch, SetStateAction } from "react";
 import { DogCard } from "../Shared/DogCard";
-import { View, Dog } from "../types";
+import { Dog } from "../types";
 import { Requests } from "../api";
 interface FunctionalDogsProps {
-  currentView: View;
+  isLoading: boolean;
+  setIsLoading: Dispatch<SetStateAction<boolean>>;
+  filteredDogsArray: Dog[];
+  setDogsArray: Dispatch<SetStateAction<Dog[]>>;
+  handleDeleteDog: (dogId: number) => Promise<void>;
+  handleUpdateDog: (dogId: number, updatedDog: Partial<Dog>) => Promise<void>;
 }
 
-export const FunctionalDogs = ({ currentView }: FunctionalDogsProps) => {
-  const [dogArray, setDogsArray] = useState<Dog[]>([]); // CHANGE BACK TO EMPTY ONCE GET IS IN PLACE
-  const [isLoading, setIsLoading] = useState<boolean>(false);
-  const { getAllDogs, updateDog, deleteDog } = Requests;
-  let dogArrayCopy = [...dogArray];
+export const FunctionalDogs = ({
+  isLoading,
+  setIsLoading,
+  filteredDogsArray,
+  setDogsArray,
+  handleDeleteDog,
+  handleUpdateDog,
+}: FunctionalDogsProps) => {
+  const { getAllDogs } = Requests;
 
   useEffect(() => {
-    async function fetchData() {
+    async function fetchDogs() {
       setIsLoading(true);
       try {
         const dogsData = await getAllDogs();
         setDogsArray(dogsData);
-        setIsLoading(false);
       } catch (error) {
         console.error("Error fetching dogs:", error);
+      } finally {
         setIsLoading(false);
       }
     }
-    fetchData();
+    fetchDogs();
   }, []);
-
-  switch (currentView) {
-    case "favorited":
-      dogArrayCopy = dogArrayCopy.filter((dog) => dog.isFavorite);
-      break;
-    case "unfavorited":
-      dogArrayCopy = dogArrayCopy.filter((dog) => !dog.isFavorite);
-      break;
-  }
 
   return (
     <>
-      {dogArrayCopy.map(({ id, image, description, isFavorite, name }) => (
+      {filteredDogsArray.map((dog) => (
         <DogCard
-          key={id}
-          dog={{
-            id: id,
-            image: image,
-            description: description,
-            isFavorite: isFavorite,
-            name: name,
-          }}
-          onTrashIconClick={() => deleteDog(id)}
-          onEmptyHeartClick={() => updateDog(id, !isFavorite)}
-          onHeartClick={() => updateDog(id, !isFavorite)}
+          key={dog.id}
+          dog={dog}
+          onTrashIconClick={() => handleDeleteDog(dog.id)}
+          onEmptyHeartClick={() => handleUpdateDog(dog.id, dog)}
+          onHeartClick={() => handleUpdateDog(dog.id, dog)}
           isLoading={isLoading}
         />
       ))}

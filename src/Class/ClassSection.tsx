@@ -1,34 +1,65 @@
-// you can use `ReactNode` to add a type to the children prop
 import { Component, ReactNode } from "react";
 import { Link } from "react-router-dom";
+import { View } from "../types";
 
-export class ClassSection extends Component {
+interface ClassSectionProps {
+  children: ReactNode;
+  setCurrentView: (view: View) => void;
+  currentView: View;
+  faveDogs: number;
+  unFaveDogs: number;
+}
+
+export class ClassSection extends Component<ClassSectionProps> {
   render() {
+    const { children, setCurrentView, currentView, faveDogs, unFaveDogs } =
+      this.props;
+
     return (
       <section id="main-section">
         <div className="container-header">
           <div className="container-label">Dogs: </div>
-
-          <Link to={"/functional"} className="btn">
-            Change to Functional
+          <Link to={"/class"} className="btn">
+            Change to Class
           </Link>
-
           <div className="selectors">
-            {/* This should display the favorited count */}
-            <div className={`selector`} onClick={() => {}}>
-              favorited ( 0 )
+            <div
+              className={`selector ${
+                currentView === "favorited" ? "active" : ""
+              }`}
+              onClick={() => {
+                setCurrentView(currentView === "favorited" ? "" : "favorited");
+              }}
+            >
+              Favorited: {faveDogs}
             </div>
-
-            {/* This should display the unfavorited count */}
-            <div className={`selector`} onClick={() => {}}>
-              unfavorited ( 0 )
+            <div
+              className={`selector ${
+                currentView === "unfavorited" ? "active" : ""
+              }`}
+              onClick={() => {
+                setCurrentView(
+                  currentView === "unfavorited" ? "" : "unfavorited"
+                );
+              }}
+            >
+              Unfavorited: {unFaveDogs}
             </div>
-            <div className={`selector active`} onClick={() => {}}>
+            <div
+              className={`selector ${
+                currentView === "create dog" ? "active" : ""
+              }`}
+              onClick={() => {
+                setCurrentView(
+                  currentView === "create dog" ? "" : "create dog"
+                );
+              }}
+            >
               create dog
             </div>
           </div>
         </div>
-        <div className="content-container"></div>
+        <div className="content-container">{children}</div>
       </section>
     );
   }

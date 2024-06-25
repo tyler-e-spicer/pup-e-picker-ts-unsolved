@@ -117,21 +117,21 @@ You should use conditional rendering to show different components inside of the 
 
 ## Interacting With the API
 
-- [ ] When the component loads, you should fetch all of the dogs from the server and store them in state
-- [ ] When you click on a gray heart, it should turn red and the dog's `isFavorite` property should be set to `true` in the database
-- [ ] When you click on a red heart, it should turn gray and the dog's `isFavorite` property should be set to `false` in the database
-- [ ] When you click on the trash icon, it should delete the dog from the database and show the updated list of dogs
-- [ ] When you create a dog, it should be added to the database
+- [X] When the component loads, you should fetch all of the dogs from the server and store them in state
+- [X] When you click on a gray heart, it should turn red and the dog's `isFavorite` property should be set to `true` in the database
+- [X] When you click on a red heart, it should turn gray and the dog's `isFavorite` property should be set to `false` in the database
+- [X] When you click on the trash icon, it should delete the dog from the database and show the updated list of dogs
+- [X] When you create a dog, it should be added to the database
 
 ## Organizing your fetch calls
 
 - [X] You should have a file called `api.ts` with a request object that contains all of your fetching functions
 - [X] These can and should be shared to both your class components and your functional components as needed
 - [X] `getAllDogs` should return a promise that resolves to an array of all the dogs in the database
-- [ ] `postDog` should take in a partial dog object, and return a promise that resolves to the dog object that was created
+- [X] `postDog` should take in a partial dog object, and return a promise that resolves to the dog object that was created
   - Note: Don't provide an id with the body of your request, the server will create an id for you
-- [ ] `updateDog` should take in a partial dog object, and return a promise that resolves to the dog object that was modified
-- [ ] `delete` should take in a number, delete the dog with that id, and return a promise
+- [X] `updateDog` should take in a partial dog object, and return a promise that resolves to the dog object that was modified
+- [X] `delete` should take in a number, delete the dog with that id, and return a promise
 
 - We STRONGLY recommend you TEST these functions before you stress out about actually using them
 - For example, MAKE SURE `getAllDogs` works before trying to use it in your components to render things on the page
@@ -139,27 +139,27 @@ You should use conditional rendering to show different components inside of the 
 
 ## Interacting With Fetch Calls
 
-- [ ] When the component loads, you should fetch all of the dogs from the server and store them in state
-- [ ] That state should be used to render all the appropriate `DogCards` on the page
-- [ ] Dogs where isFavorite is true should have a red heart
-- [ ] Dogs where isFavorite is false should have a gray heart
-- [ ] Clicking a gray heart on a dog should turn it red and update the database to set `isFavorite` to `true`
-- [ ] Clicking a red heart on a dog should turn it gray and update the database to set `isFavorite` to `false`
-- [ ] Clicking the trash icon on a dog should delete it from the database and update the list of dogs on the page
-- [ ] Creating a dog should add it to the database and update the list of dogs on the page
+- [X] When the component loads, you should fetch all of the dogs from the server and store them in state
+- [X] That state should be used to render all the appropriate `DogCards` on the page
+- [X] Dogs where isFavorite is true should have a red heart
+- [X] Dogs where isFavorite is false should have a gray heart
+- [X] Clicking a gray heart on a dog should turn it red and update the database to set `isFavorite` to `true`
+- [X] Clicking a red heart on a dog should turn it gray and update the database to set `isFavorite` to `false`
+- [X] Clicking the trash icon on a dog should delete it from the database and update the list of dogs on the page
+- [X] Creating a dog should add it to the database and update the list of dogs on the page
 
 ## Loading States
 
 If the data is still loading then...
 
-- [ ] All inputs should be disabled
-- [ ] Buttons should be disabled
+- [X] All inputs should be disabled
+- [X] Buttons should be disabled
 
 ## What happens when you submit the form
 
-- [ ] When you submit the form, it should create a new dog in the database
-- [ ] If you navigate to the `all` tab, you should see the new dog in the list of dogs
-- [ ] If you navigate to the `favorited` tab, you should NOT see the new dog in the list of dogs
-- [ ] If you navigate to the `unfavorited` tab, you should see the new dog in the list of dogs
-- [ ] After the submission the form should be cleared, and the select should return to the default
-- [ ] After submitting a toast notification from `react-hot-toast` should appear saying "Dog Created"
+- [X] When you submit the form, it should create a new dog in the database
+- [X] If you navigate to the `all` tab, you should see the new dog in the list of dogs
+- [X] If you navigate to the `favorited` tab, you should NOT see the new dog in the list of dogs
+- [X] If you navigate to the `unfavorited` tab, you should see the new dog in the list of dogs
+- [X] After the submission the form should be cleared, and the select should return to the default
+- [X] After submitting a toast notification from `react-hot-toast` should appear saying "Dog Created"

@@ -1,27 +1,6 @@
 {
   "dogs": [
     {
-      "name": "Gus",
-      "image": "/assets/boxer.png",
-      "description": "farmer inasmuch absent romp alpenhorn bony mangle hence",
-      "isFavorite": false,
-      "id": 0
-    },
-    {
-      "name": "Christian",
-      "image": "/assets/boxer.png",
-      "description": "yuck that or saxophone scrawny upon reluctantly oh",
-      "isFavorite": false,
-      "id": 1
-    },
-    {
-      "name": "Corrine",
-      "image": "/assets/cowardly.png",
-      "description": "cage zowie civilize workforce intently",
-      "isFavorite": true,
-      "id": 2
-    },
-    {
       "name": "Jeanette",
       "image": "/assets/dalmation.png",
       "description": "e-mail sphynx sturgeon force block grim ouch",
@@ -29,38 +8,10 @@
       "id": 3
     },
     {
-      "name": "Jesse",
-      "image": "/assets/chihuahua.avif",
-      "description": "wherever loudly loyal till quirkily",
-      "isFavorite": true,
-      "id": 4
-    },
-    {
-      "name": "Brielle",
-      "image": "/assets/corgi.png",
-      "description": "gosh kaleidoscopic moai strictly although",
-      "isFavorite": true,
-      "id": 5
-    },
-    {
-      "name": "Emma",
-      "image": "/assets/dalmation.png",
-      "description": "however allow praise an towards decimal yawningly ha",
-      "isFavorite": false,
-      "id": 6
-    },
-    {
-      "name": "Lauriane",
-      "image": "/assets/blue-heeler.png",
-      "description": "for slow yowza including ugh numismatist soggy excepting",
-      "isFavorite": false,
-      "id": 7
-    },
-    {
       "name": "Kira",
       "image": "/assets/boxer.png",
       "description": "elegantly um ugh ski arrogate ugh hence",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 8
     },
     {
@@ -69,41 +20,6 @@
       "description": "colorfully sunset essence mid powerfully",
       "isFavorite": true,
       "id": 9
-    },
-    {
-      "name": "Katharina",
-      "image": "/assets/corgi.png",
-      "description": "mellow intensely blah intentional hm",
-      "isFavorite": true,
-      "id": 10
-    },
-    {
-      "name": "Kaley",
-      "image": "/assets/dalmation.png",
-      "description": "optimistically as max towards than hm mostly unwieldy",
-      "isFavorite": false,
-      "id": 11
-    },
-    {
-      "name": "Wallace",
-      "image": "/assets/cowardly.png",
-      "description": "major short anarchy usually golden",
-      "isFavorite": false,
-      "id": 12
-    },
-    {
-      "name": "Sonya",
-      "image": "/assets/boxer.png",
-      "description": "thoughtfully kneecap following besides whoa upright evening-wear longingly",
-      "isFavorite": true,
-      "id": 13
-    },
-    {
-      "name": "Oleta",
-      "image": "/assets/corgi.png",
-      "description": "needily lest careful when gosh",
-      "isFavorite": false,
-      "id": 14
     },
     {
       "name": "Ashtyn",
@@ -116,15 +32,8 @@
       "name": "Franz",
       "image": "/assets/corgi.png",
       "description": "finance campaign after ha once twig loathe disadvantage",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 16
-    },
-    {
-      "name": "Fritz",
-      "image": "/assets/cowardly.png",
-      "description": "where while mostly paw unless",
-      "isFavorite": false,
-      "id": 17
     },
     {
       "name": "Dixie",
@@ -134,11 +43,74 @@
       "id": 18
     },
     {
-      "name": "Brando",
-      "image": "/assets/boxer.png",
-      "description": "cube subprime spiffy furthermore though",
-      "isFavorite": true,
-      "id": 19
+      "name": "Tyler2",
+      "image": "/assets/dalmation.png",
+      "description": "New and improved ",
+      "isFavorite": false,
+      "id": 22
+    },
+    {
+      "name": "Eric",
+      "image": "/assets/blue-heeler.png",
+      "description": "Aamzing dog! ",
+      "isFavorite": false,
+      "id": 24
+    },
+    {
+      "name": "Laurie ",
+      "image": "/assets/boxer.jpeg",
+      "description": "Is woman's best friend. ",
+      "isFavorite": false,
+      "id": 25
+    },
+    {
+      "name": "SuperMutt",
+      "image": "/assets/cowardly.png",
+      "description": "The most powerful dog of dogs. ",
+      "isFavorite": false,
+      "id": 26
+    },
+    {
+      "name": "Toast",
+      "image": "/assets/boxer.jpeg",
+      "description": "This dog loves breakfast. ",
+      "isFavorite": false,
+      "id": 27
+    },
+    {
+      "name": "Ruthie",
+      "image": "/assets/corgi.png",
+      "description": "Is a good girl ... ",
+      "isFavorite": false,
+      "id": 28
+    },
+    {
+      "name": "New Dogo",
+      "image": "/assets/cowardly.png",
+      "description": "Woot! New addition to the fam.",
+      "isFavorite": false,
+      "id": 29
+    },
+    {
+      "name": "Adding dog",
+      "image": "/assets/blue-heeler.png",
+      "description": "Here we are ",
+      "isFavorite": false,
+      "id": 30
+    },
+    {
+      "name": "Last Chance",
+      "image": "/assets/corgi.png",
+      "description": "There's lots of dogs named chance, but he's the last chance. ",
+      "isFavorite": false,
+      "id": 31
+    },
+    {
+      "name": "Test2",
+      "image": "/assets/corgi.png",
+      "description": "test",
+      "isFavorite": false,
+      "id": 32
     }
   ]
 }

@@ -5,12 +5,16 @@ interface FunctionalSectionProps {
   children: ReactNode;
   setCurrentView: Dispatch<SetStateAction<View>>;
   currentView: View;
+  faveDogs: number;
+  unFaveDogs: number;
 }
 
 export const FunctionalSection = ({
   children,
   setCurrentView,
   currentView,
+  faveDogs,
+  unFaveDogs,
 }: FunctionalSectionProps) => {
   return (
     <section id="main-section">
@@ -29,7 +33,7 @@ export const FunctionalSection = ({
               setCurrentView(currentView === "favorited" ? "" : "favorited");
             }}
           >
-            favorited ( 12 )
+            Favorited: {faveDogs}
           </div>
 
           {/* This should display the unfavorited count */}
@@ -43,7 +47,7 @@ export const FunctionalSection = ({
               );
             }}
           >
-            unfavorited ( 25 )
+            Unfavorited: {unFaveDogs}
           </div>
           <div
             className={`selector ${

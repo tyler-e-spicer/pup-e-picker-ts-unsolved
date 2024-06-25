@@ -2,6 +2,8 @@ import { Dog } from "./types";
 
 export const baseUrl = "http://localhost:3000";
 
+// I can eliminate the below catch blocks given the structure of the handler functions. However, it is generating a linting error, so leaving them in. 
+
 export const Requests = {
   getAllDogs: async (): Promise<Dog[]> => {
     try {
@@ -29,8 +31,8 @@ export const Requests = {
       if (!res.ok) {
         throw new Error("Could not create dog.");
       }
-      const newDog = await res.json();
-      return newDog;
+      const createdDog = await res.json();
+      return createdDog;
     } catch (error) {
       console.error("Error creating dog:", error);
       throw error;
@@ -53,20 +55,23 @@ export const Requests = {
     }
   },
 
-  updateDog: async (dogId: number, isFavorite: boolean) => {
+  updateDog: async (dogId: number, updatedDog: Partial<Dog>): Promise<Dog> => {
     try {
       const response = await fetch(`${baseUrl}/dogs/${dogId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ isFavorite }),
+        body: JSON.stringify({
+          ...updatedDog,
+          isFavorite: !updatedDog.isFavorite,
+        }),
       });
       if (!response.ok) {
         throw new Error("Failed to update dog");
       }
-      const data = await response.json();
-      return data;
+      const updatedData = await response.json();
+      return updatedData;
     } catch (error) {
       console.error("Error updating dog:", error);
       throw error;
