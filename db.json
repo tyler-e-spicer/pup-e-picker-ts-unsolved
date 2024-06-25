@@ -18,7 +18,7 @@
       "name": "Tressa",
       "image": "/assets/boxer.png",
       "description": "colorfully sunset essence mid powerfully",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 9
     },
     {
@@ -74,7 +74,7 @@
       "name": "Toast",
       "image": "/assets/boxer.jpeg",
       "description": "This dog loves breakfast. ",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 27
     },
     {
@@ -125,6 +125,13 @@
       "description": "testing",
       "isFavorite": false,
       "id": 34
+    },
+    {
+      "name": "Tyler",
+      "image": "/assets/cowardly.png",
+      "description": "Tyler is the bestest boy ",
+      "isFavorite": false,
+      "id": 35
     }
   ]
 }

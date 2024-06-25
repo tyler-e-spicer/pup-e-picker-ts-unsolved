@@ -82,6 +82,7 @@ export function FunctionalApp() {
           <FunctionalCreateDogForm
             isLoading={isLoading}
             setIsLoading={setIsLoading}
+            fetchDogs={fetchDogs}
           />
         ) : (
           <FunctionalDogs

@@ -5,6 +5,7 @@ import toast from "react-hot-toast";
 interface FunctionalCreateDogFormProps {
   isLoading: boolean;
   setIsLoading: Dispatch<SetStateAction<boolean>>;
+  fetchDogs: () => void;
 }
 
 const defaultSelectedImage = dogPictures.BlueHeeler;
@@ -12,6 +13,7 @@ const defaultSelectedImage = dogPictures.BlueHeeler;
 export const FunctionalCreateDogForm = ({
   isLoading,
   setIsLoading,
+  fetchDogs,
 }: FunctionalCreateDogFormProps) => {
   const [name, setName] = useState("");
   const [selectedImage, setSelectedImage] = useState(dogPictures.BlueHeeler);
@@ -36,6 +38,7 @@ export const FunctionalCreateDogForm = ({
         description: description,
         isFavorite: false,
       });
+      fetchDogs();
       toast.success("Ruff!! Dog created.");
       resetForm();
     } catch (error) {
