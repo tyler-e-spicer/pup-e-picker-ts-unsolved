@@ -6,14 +6,19 @@ interface ClassSectionProps {
   children: ReactNode;
   setCurrentView: (view: View) => void;
   currentView: View;
-  faveDogs: number;
-  unFaveDogs: number;
+  numOfFaveDogs: number;
+  numOfUnFaveDogs: number;
 }
 
 export class ClassSection extends Component<ClassSectionProps> {
   render() {
-    const { children, setCurrentView, currentView, faveDogs, unFaveDogs } =
-      this.props;
+    const {
+      children,
+      setCurrentView,
+      currentView,
+      numOfFaveDogs,
+      numOfUnFaveDogs,
+    } = this.props;
 
     return (
       <section id="main-section">
@@ -31,7 +36,7 @@ export class ClassSection extends Component<ClassSectionProps> {
                 setCurrentView(currentView === "favorited" ? "" : "favorited");
               }}
             >
-              Favorited: {faveDogs}
+              Favorited: {numOfFaveDogs}
             </div>
             <div
               className={`selector ${
@@ -43,7 +48,7 @@ export class ClassSection extends Component<ClassSectionProps> {
                 );
               }}
             >
-              Unfavorited: {unFaveDogs}
+              Unfavorited: {numOfUnFaveDogs}
             </div>
             <div
               className={`selector ${

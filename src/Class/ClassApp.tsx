@@ -86,8 +86,8 @@ export class ClassApp extends Component<Record<string, never>, ClassAppState> {
         <ClassSection
           currentView={currentView}
           setCurrentView={(view: View) => this.setState({ currentView: view })}
-          faveDogs={faveDogs.length}
-          unFaveDogs={unFaveDogs.length}
+          numOfFaveDogs={faveDogs.length}
+          numOfUnFaveDogs={unFaveDogs.length}
         >
           {currentView === "create dog" ? (
             <ClassCreateDogForm
